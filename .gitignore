@@ -1,0 +1,109 @@
+### General JetBrains IDEs (CLion, IntelliJ, etc.) ###
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific files
+**/.idea/**/workspace.xml
+**/.idea/**/tasks.xml
+**/.idea/**/usage.statistics.xml
+**/.idea/**/dictionaries
+**/.idea/**/shelf
+**/.idea/**/aws.xml
+
+# Generated files
+**/.idea/**/contentModel.xml
+**/.idea/**/dataSources/
+**/.idea/**/dataSources.ids
+**/.idea/**/dataSources.local.xml
+**/.idea/**/sqlDataSources.xml
+**/.idea/**/dynamic.xml
+**/.idea/**/uiDesigner.xml
+**/.idea/**/dbnavigator.xml
+**/.idea/**/gradle.xml
+**/.idea/**/libraries
+**/.idea/**/mongoSettings.xml
+**/.idea/**/httpRequests
+**/.idea/caches/build_file_checksums.ser
+**/com_crashlytics_export_strings.xml
+**/crashlytics.properties
+**/crashlytics-build.properties
+**/fabric.properties
+**/.idea_modules/
+
+# Run configurations and code styles (keep for team sharing)
+**/.idea/*
+!**/.idea/codeStyles
+!**/.idea/runConfigurations
+
+# Build and output directories
+**/out/
+**/cmake-build-*/
+
+# File-based project format
+**/*.iws
+
+# Cursive Clojure plugin
+**/.idea/replstate.xml
+
+# SonarLint plugin
+**/.idea/sonarlint/
+
+# JIRA plugin
+**/atlassian-ide-plugin.xml
+
+### Gradle and Maven ###
+# Uncomment if using auto-import
+# **/.idea/artifacts
+# **/.idea/compiler.xml
+# **/.idea/jarRepositories.xml
+# **/.idea/modules.xml
+# **/.idea/*.iml
+# **/.idea/modules
+# **/*.iml
+# **/*.ipr
+
+### CMake ###
+**/CMakeLists.txt.user
+**/CMakeCache.txt
+**/CMakeFiles
+**/CMakeScripts
+**/Testing
+**/Makefile
+**/cmake_install.cmake
+**/install_manifest.txt
+**/compile_commands.json
+**/CTestTestfile.cmake
+**/_deps
+**/*-prefix/
+**/.cache
+**/build
+
+### macOS ###
+# General macOS system files
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+
+# Icon files
+**/Icon
+
+# Thumbnails and temporary files
+**/._*
+
+# Files appearing in the root of a volume
+**/.DocumentRevisions-V100
+**/.fseventsd
+**/.Spotlight-V100
+**/.TemporaryItems
+**/.Trashes
+**/.VolumeIcon.icns
+**/.com.apple.timemachine.donotpresent
+
+# AFP share directories
+**/.AppleDB
+**/.AppleDesktop
+**/Network Trash Folder
+**/Temporary Items
+**/.apdisk
+
+# iCloud generated files
+**/*.icloud

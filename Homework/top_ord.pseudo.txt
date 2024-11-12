@@ -1,0 +1,33 @@
+Algorithm TopologicalSort(graph G):
+
+    For each vertex v in G:
+        state(v) = "unvisited"
+    hasCycle = false
+    result = empty list
+
+    For each vertex s in G:
+        If state(s) == "unvisited":
+            DFS(s)
+
+    If hasCycle == true:
+        return "No topological order, cycle detected"
+    Else:
+        return reverse(result)
+
+
+Algorithm DFS(vertex v):
+
+    If state(v) == "visiting":
+        hasCycle = true
+        return
+
+    If state(v) == "visited":
+        return
+
+    state(v) = "visiting"
+
+    For each successor u of v:
+        DFS(u)
+
+    state(v) = "visited"
+    append v to result

@@ -1,0 +1,46 @@
+1. HeapDecreaseKey(H, x, k) for Binary Heaps
+
+In a binary heap, the HeapDecreaseKey operation reduces the value of an element x to k in the heap H. We assume that x is a pointer to the current position of the element in the heap array.
+
+1. Verify that k is not greater than the current key of x. 
+   - If it is, return an error, as we are only allowed to decrease keys.
+2. Set the key of x to k.
+3. Since we have decreased the key of x, it may violate the heap property with its parent. 
+   To restore the heap property, do a bubble up operation:
+   - While x is not the root and x's key is less than its parent’s key:
+     - Swap x with its parent.
+     - Move x up the heap.
+
+HeapDecreaseKey(H, x, k):
+    if k > H[x]:
+        return error("new key is greater than current key")
+
+    H[x] = k
+    while x > 1 and H[parent(x)] > H[x]:
+        swap H[x] with H[parent(x)]
+        x = parent(x)
+
+The time complexity of HeapDecreaseKey in a binary heap is O(log n), as the height of the binary heap is O(log n), and in the worst case, the bubble up operation will move x all the way to the root.
+
+2. BHDecreaseKey(H, x, k) for Binomial Heaps
+
+In a binomial heap, BHDecreaseKey reduces the value of an element x to k in the heap H.
+
+1. Ensure that k is not greater than the current key of x.
+   - If it is, return error
+2. Set the key of x to k.
+3. If the decreased key of x is now smaller than its parent's key, we must move x up the heap to restore the heap property:
+   - While x is not the root and x's key is less than its parent’s key:
+     - Swap x with its parent.
+     - Move x up the heap.
+
+BHDecreaseKey(H, x, k):
+    if k > x.key:
+        return error("new key is greater than current key")
+
+    x.key = k
+    while x.parent is not null and x.key < x.parent.key:
+        swap x.key with x.parent.key
+        x = x.parent
+        
+The time complexity of BHDecreaseKey in a binomial heap is O(log n) because the height of a binomial tree is at most O(log n), and in the worst case, the bubble up operation will move x up to the root of its binomial tree.
